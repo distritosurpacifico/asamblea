@@ -251,13 +251,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('inicio')">
-                    <!-- Logo NAZ-removebg-preview.png sustituyendo las ondas -->
-                    <div class="w-12 h-12 rounded-2xl bg-white/10 border border-white/30 flex items-center justify-center p-1 shadow-lg">
+                    <!-- Logo NAZ-removebg-preview.png con fondo oscuro sólido y sin palomita -->
+                    <div class="w-12 h-12 rounded-2xl bg-ocean-950 border border-ocean-800 flex items-center justify-center p-1.5 shadow-lg">
                         <img src="NAZ-removebg-preview.png" alt="Iglesia del Nazareno" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <span class="block font-heading font-bold text-lg text-white leading-tight drop-shadow-sm">Distrito Sur Pacífico</span>
-                        <span class="block text-xs text-coastal-turquoise font-medium tracking-wider uppercase"><i class="fa-solid fa-dove mr-1"></i>Iglesia del Nazareno</span>
+                        <span class="block text-xs text-coastal-turquoise font-medium tracking-wider uppercase">Iglesia del Nazareno</span>
                     </div>
                 </div>
                 <div class="hidden lg:flex items-center space-x-5 font-medium text-sm">
@@ -342,47 +342,47 @@
 
                         </div>
 
-                        <!-- Convenciones / Departamentos con sus respectivos logos -->
+                        <!-- Convenciones / Departamentos con logos más grandes -->
                         <div class="lg:col-span-4 flex flex-col items-center justify-center">
                             <div class="w-full glass-card p-8 rounded-3xl glow-effect space-y-6 text-center">
                                 <h3 class="font-heading font-bold text-sm tracking-widest text-coastal-turquoise uppercase">Convenciones Distritales</h3>
                                 <div class="grid grid-cols-1 gap-4">
-                                    <!-- JNI con JNI.png -->
+                                    <!-- JNI con JNI.png más grande -->
                                     <div onclick="switchPage('convencion-jni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-sky-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center p-1 overflow-hidden">
+                                        <div class="flex items-center space-x-3.5">
+                                            <div class="w-14 h-14 bg-ocean-950 border border-ocean-800 rounded-2xl flex items-center justify-center p-1.5 overflow-hidden shadow-md">
                                                 <img src="JNI.png" alt="JNI Logo" class="w-full h-full object-contain">
                                             </div>
                                             <div class="text-left">
-                                                <span class="block font-heading font-bold text-white">JNI</span>
+                                                <span class="block font-heading font-bold text-white text-base">JNI</span>
                                                 <span class="text-xs text-slate-300">Juventud Nazarena Internacional</span>
                                             </div>
                                         </div>
                                         <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
                                     </div>
 
-                                    <!-- DNI con dni-removebg-preview.png -->
+                                    <!-- DNI con dni-removebg-preview.png más grande -->
                                     <div onclick="switchPage('convencion-dni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-coastal-turquoise p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center p-1 overflow-hidden">
+                                        <div class="flex items-center space-x-3.5">
+                                            <div class="w-14 h-14 bg-ocean-950 border border-ocean-800 rounded-2xl flex items-center justify-center p-1.5 overflow-hidden shadow-md">
                                                 <img src="dni-removebg-preview.png" alt="DNI Logo" class="w-full h-full object-contain">
                                             </div>
                                             <div class="text-left">
-                                                <span class="block font-heading font-bold text-white">DNI</span>
+                                                <span class="block font-heading font-bold text-white text-base">DNI</span>
                                                 <span class="text-xs text-slate-300">Discipulado Nazareno Internacional</span>
                                             </div>
                                         </div>
                                         <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
                                     </div>
 
-                                    <!-- MNI con MNI.png -->
+                                    <!-- MNI con MNI.png más grande -->
                                     <div onclick="switchPage('convencion-mni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-amber-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center p-1 overflow-hidden">
+                                        <div class="flex items-center space-x-3.5">
+                                            <div class="w-14 h-14 bg-ocean-950 border border-ocean-800 rounded-2xl flex items-center justify-center p-1.5 overflow-hidden shadow-md">
                                                 <img src="MNI.png" alt="MNI Logo" class="w-full h-full object-contain">
                                             </div>
                                             <div class="text-left">
-                                                <span class="block font-heading font-bold text-white">MNI</span>
+                                                <span class="block font-heading font-bold text-white text-base">MNI</span>
                                                 <span class="text-xs text-slate-300">Misiones Nazarenas Internacional</span>
                                             </div>
                                         </div>
@@ -391,8 +391,8 @@
 
                                     <!-- Mayordomía y Economía -->
                                     <div onclick="switchPage('convencion-mayordomia')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-teal-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
-                                        <div class="flex items-center space-x-3">
-                                            <div class="w-10 h-10 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-300 font-bold">
+                                        <div class="flex items-center space-x-3.5">
+                                            <div class="w-14 h-14 bg-ocean-950 border border-ocean-800 rounded-2xl flex items-center justify-center text-teal-300 font-bold text-xl shadow-md">
                                                 <i class="fa-solid fa-users"></i>
                                             </div>
                                             <div class="text-left">
@@ -463,7 +463,7 @@
             </div>
         </div>
 
-        <!-- SECCIONES / PÁGINAS PARA LAS CONVENCIONES CON SUS IMÁGENES OFICIALES -->
+        <!-- SECCIONES / PÁGINAS PARA LAS CONVENCIONES -->
 
         <!-- VIEW: CONVENCIÓN JNI -->
         <div id="view-convencion-jni" class="page-view hidden space-y-8 max-w-3xl mx-auto">
@@ -481,7 +481,7 @@
             </div>
         </div>
 
-        <!-- VIEW: CONVENCIÓN DNI (Con DNI.jpeg corregido) -->
+        <!-- VIEW: CONVENCIÓN DNI -->
         <div id="view-convencion-dni" class="page-view hidden space-y-8 max-w-3xl mx-auto">
             <div class="flex items-center justify-between border-b border-coastal-teal/20 pb-4">
                 <div class="space-y-1">
