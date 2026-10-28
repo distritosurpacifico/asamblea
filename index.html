@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLIII Asamblea | Distrito Sur Pacífico</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        serifHeading: ['Cinzel', 'serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            800: '#0f4c5c',
+                            900: '#083344',
+                            950: '#041f2d',
+                        },
+                        coastal: {
+                            teal: '#14b8a6',
+                            turquoise: '#06b6d4',
+                            sand: '#f59e0b',
+                            sandLight: '#fef3c7',
+                            coral: '#fb7185',
+                            gold: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { 
+            background: linear-gradient(135deg, rgba(4, 31, 45, 0.75) 0%, rgba(8, 51, 68, 0.65) 50%, rgba(15, 76, 92, 0.75) 100%), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; 
+        }
+        .hero-bg-custom {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .glass-card { 
+            background: rgba(8, 51, 68, 0.55); 
+            backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+        }
+        .glow-effect { 
+            box-shadow: 0 10px 30px -5px rgba(6, 182, 212, 0.25); 
+        }
+        .gold-glow-text {
+            background: linear-gradient(180deg, #ffffff 0%, #bae6fd 40%, #38bdf8 70%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(6, 182, 212, 0.5);
+        }
+        .bg-coastal-dawn {
+            background: linear-gradient(180deg, #041f2d 0%, #083344 50%, #0e7490 100%);
+        }
+        .coastal-card-bg-1 {
+            background: linear-gradient(180deg, rgba(8, 51, 68, 0.85) 0%, rgba(4, 31, 45, 0.92) 100%),
+                        url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+        }
+        .coastal-card-bg-2 {
+            background: linear-gradient(180deg, rgba(8, 51, 68, 0.85) 0%, rgba(4, 31, 45, 0.92) 100%),
+                        url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+        }
+    </style>
+
+    <!-- Tema visual moderno: Brisa del Pacífico | editorial, limpio y tropical -->
+    <style id="modern-pacific-theme">
+        :root {
+            color-scheme: light;
+            --ink: #173f3b;
+            --ink-soft: #496762;
+            --muted: #6f8580;
+            --teal: #087f78;
+            --turquoise: #35bdb1;
+            --seafoam: #e4f3ec;
+            --sand: #fbf8ef;
+            --coral: #e98068;
+            --leaf: #668b69;
+            --line: #dce8df;
+            --card: rgba(255,255,251,.94);
+            --shadow: 0 16px 42px rgba(24,63,60,.085);
+        }
+        html { background: var(--sand); scroll-padding-top: 6rem; }
+        body {
+            color: var(--ink) !important;
+            background:
+                radial-gradient(ellipse at 8% 8%, rgba(53,189,177,.12), transparent 26rem),
+                radial-gradient(ellipse at 92% 28%, rgba(233,128,104,.10), transparent 24rem),
+                linear-gradient(180deg, #fffdf7 0%, #f7f8f1 50%, #edf5ef 100%) !important;
+            font-family: Inter, sans-serif;
+            letter-spacing: -.012em;
+        }
+        ::selection { background: #bde9df; color: #173f3b; }
+        nav {
+            background: rgba(255,253,247,.92) !important;
+            border-bottom: 1px solid rgba(8,127,120,.15) !important;
+            box-shadow: 0 8px 26px rgba(23,63,59,.075) !important;
+            backdrop-filter: blur(18px) saturate(145%);
+            -webkit-backdrop-filter: blur(18px) saturate(145%);
+        }
+        nav > div > div { min-height: 5rem; }
+        nav .bg-gradient-to-tr {
+            background-image: linear-gradient(145deg, #087f78, #2ab5aa 62%, #efb17a) !important;
+            border-color: rgba(255,255,255,.72) !important;
+            box-shadow: 0 8px 20px rgba(8,127,120,.20) !important;
+        }
+        nav .bg-gradient-to-tr .text-white { color: #fff !important; }
+        nav .font-heading { letter-spacing: -.025em; }
+        nav .nav-link {
+            position: relative;
+            padding: .65rem .05rem;
+            color: var(--ink-soft) !important;
+            font-weight: 600;
+        }
+        nav .nav-link::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            left: 0; right: 100%; bottom: .25rem;
+            background: linear-gradient(90deg,var(--teal),var(--coral));
+            border-radius: 9px;
+            transition: right .22s ease;
+        }
+        nav .nav-link:hover::after, nav .nav-link.text-coastal-turquoise::after { right: 0; }
+        nav .nav-link:hover, nav .nav-link.text-coastal-turquoise { color: var(--teal) !important; }
+        #mobile-menu { background: rgba(255,253,247,.98) !important; border-color: var(--line) !important; }
+        #mobile-menu button { color: var(--ink-soft) !important; }
+        #mobile-menu button:hover { color: var(--teal) !important; }
+        main { position: relative; }
+        main::before, main::after {
+            content: ""; position: fixed; width: 19rem; height: 19rem; border-radius: 50%;
+            pointer-events: none; z-index: -1; filter: blur(54px);
+        }
+        main::before { right: -11rem; top: 22rem; background: rgba(53,189,177,.10); }
+        main::after { left: -12rem; bottom: -5rem; background: rgba(233,128,104,.08); }
+        .page-view { animation: pageRise .42s cubic-bezier(.2,.75,.25,1) both; }
+        @keyframes pageRise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+        [class*="bg-ocean-"] { background-color: var(--card) !important; }
+        [class*="border-white"] { border-color: rgba(22,91,81,.14) !important; }
+        [class*="border-cyan-"], [class*="border-teal-"], [class*="border-coastal-teal"] { border-color: rgba(8,127,120,.20) !important; }
+        [class*="shadow-"] { box-shadow: var(--shadow) !important; }
+        [class*="hover:bg-ocean-"]:hover { background-color: #eaf6ef !important; }
+        [class*="hover:border-coastal-turquoise"]:hover { border-color: var(--turquoise) !important; }
+        .rounded-3xl { border-radius: 1.65rem !important; }
+        .rounded-2xl { border-radius: 1.15rem !important; }
+        .glow-effect { box-shadow: 0 18px 48px rgba(8,127,120,.10) !important; }
+        .hero-gradient {
+            isolation: isolate;
+            background:
+                linear-gradient(105deg, rgba(255,253,245,.42) 0%, rgba(237,248,239,.18) 45%, rgba(243,248,237,.04) 100%),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat !important;
+            border: 1px solid rgba(8,127,120,.18) !important;
+            box-shadow: 0 24px 64px rgba(24,63,60,.12) !important;
+        }
+        .hero-gradient::before {
+            content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+            background: linear-gradient(125deg, rgba(255,255,255,.12), transparent 55%, rgba(240,177,122,.12));
+        }
+        .hero-gradient .text-white { color: var(--ink) !important; }
+        .hero-gradient .text-slate-300, .hero-gradient .text-slate-200 { color: #496762 !important; }
+        .hero-gradient [class*="bg-ocean-"] { background: rgba(255,253,247,.82) !important; border-color: rgba(8,127,120,.16) !important; }
+        .hero-gradient .glass-card {
+            background: rgba(255,253,247,.84) !important;
+            border: 1px solid rgba(255,255,255,.85) !important;
+            backdrop-filter: blur(18px) saturate(125%);
+            -webkit-backdrop-filter: blur(18px) saturate(125%);
+        }
+        .gold-glow-text {
+            background: linear-gradient(120deg, #086c65 0%, #16a49a 52%, #d76f58 100%) !important;
+            -webkit-background-clip: text !important; background-clip: text !important;
+            -webkit-text-fill-color: transparent !important; text-shadow: none !important;
+        }
+        #hero-header h2 { color: #173f3b !important; letter-spacing: -.04em; }
+        #hero-header h1.gold-glow-text { font-size: clamp(4.7rem, 9vw, 7.8rem); }
+        #hero-header .text-amber-300, #hero-header .text-amber-100 { color: #b95e43 !important; }
+        #hero-header .text-cyan-200, #hero-header .text-coastal-turquoise { color: var(--teal) !important; }
+        #hero-header [class~="bg-ocean-950/70"], #hero-header [class~="bg-ocean-950/75"] { background: rgba(255,253,247,.86) !important; }
+        .coastal-card-bg-1 {
+            background: linear-gradient(115deg, rgba(255,252,244,.74), rgba(227,245,236,.63)),
+              url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=85') center/cover no-repeat !important;
+            border-color: rgba(8,127,120,.17) !important;
+        }
+        .coastal-card-bg-2 {
+            background: linear-gradient(115deg, rgba(241,250,246,.70), rgba(255,242,225,.59)),
+              url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1000&q=85') center/cover no-repeat !important;
+            border-color: rgba(8,127,120,.17) !important;
+        }
+        .text-white { color: var(--ink) !important; }
+        .text-slate-100 { color: #244844 !important; }
+        .text-slate-200 { color: #3f605a !important; }
+        .text-slate-300 { color: #526e67 !important; }
+        .text-slate-400 { color: #6b817a !important; }
+        .text-slate-500 { color: #7b8d85 !important; }
+        .text-coastal-turquoise, .text-cyan-200, .text-cyan-300, .text-teal-300 { color: #087f78 !important; }
+        .text-amber-100, .text-amber-200, .text-amber-300, .text-amber-400 { color: #a95835 !important; }
+        .text-emerald-300, .text-emerald-400 { color: #287a57 !important; }
+        .text-sky-300, .text-sky-400 { color: #267e9b !important; }
+        .text-indigo-400 { color: #566db0 !important; }
+        .text-red-300, .text-red-400 { color: #b94f4a !important; }
+        [class*="bg-cyan-"][class*="/20"], [class*="bg-teal-"][class*="/20"],
+        [class*="bg-emerald-"][class*="/20"], [class*="bg-sky-"][class*="/20"] { background-color: #e0f3eb !important; }
+        [class*="bg-amber-"][class*="/20"], [class*="bg-amber-"][class*="/30"] { background-color: #fff0d9 !important; }
+        [class*="bg-red-"][class*="/20"] { background-color: #fae7e1 !important; }
+        .bg-gradient-to-r { background-image: linear-gradient(120deg, #087f78 0%, #25b9ae 58%, #eaa47c 100%) !important; }
+        .bg-gradient-to-r.text-ocean-950, .text-ocean-950 { color: #103d39 !important; }
+        input, select, textarea {
+            background-color: rgba(255,255,251,.96) !important;
+            color: var(--ink) !important;
+            border-color: #cddfd5 !important;
+            border-radius: .9rem;
+        }
+        input::placeholder, textarea::placeholder { color: #83968e !important; }
+        input:focus, select:focus, textarea:focus { border-color: #35bdb1 !important; box-shadow: 0 0 0 4px rgba(53,189,177,.12) !important; }
+        #view-agenda .directory-section > div, #informes-list-container > div, #resoluciones-list-container > div {
+            border-color: rgba(8,127,120,.15) !important;
+            box-shadow: 0 12px 28px rgba(24,63,60,.06) !important;
+        }
+        #view-calendario > div[class~="bg-ocean-900/90"] { background: rgba(255,255,251,.92) !important; }
+        button, a { transition-duration: .2s; }
+        button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 3px solid rgba(53,189,177,.52); outline-offset: 3px;
+        }
+        button:not(:disabled):active { transform: translateY(1px); }
+        footer, footer[class*="bg-ocean-"] {
+            background: linear-gradient(120deg, #e8f4ec, #f9f4e7 70%, #f7e8dd) !important;
+            border-top: 1px solid #d5e5db !important;
+            color: var(--muted) !important;
+        }
+        footer .text-white { color: var(--ink) !important; }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-ocean-950 via-ocean-900 to-ocean-950 text-slate-100 font-sans antialiased selection:bg-coastal-teal selection:text-ocean-950 min-h-screen">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="sticky top-0 z-50 bg-ocean-950/80 backdrop-blur-lg border-b border-cyan-500/20 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('inicio')">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-600 to-coastal-turquoise border border-white/30 flex items-center justify-center p-2 shadow-lg shadow-cyan-500/20">
+                        <i class="fa-solid fa-water text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-heading font-bold text-lg text-white leading-tight drop-shadow-sm">Distrito Sur Pacífico</span>
+                        <span class="block text-xs text-coastal-turquoise font-medium tracking-wider uppercase"><i class="fa-solid fa-dove mr-1"></i>Iglesia del Nazareno</span>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-5 font-medium text-sm">
+                    <button onclick="switchPage('inicio')" class="nav-link text-coastal-turquoise font-semibold transition-colors" data-target="inicio">Inicio</button>
+                    <button onclick="switchPage('programa')" class="nav-link text-slate-200 hover:text-coastal-turquoise transition-colors" data-target="programa">Programa</button>
+                    <button onclick="checkAgendaAccess()" class="nav-link text-slate-200 hover:text-coastal-turquoise transition-colors" data-target="agenda">Agenda</button>
+                    <button onclick="switchPage('informes')" class="nav-link text-slate-200 hover:text-coastal-turquoise transition-colors" data-target="informes">Informes</button>
+                    <button onclick="switchPage('calendario')" class="nav-link text-slate-200 hover:text-coastal-turquoise transition-colors" data-target="calendario">Calendario</button>
+                    <button onclick="switchPage('resoluciones')" class="nav-link text-slate-200 hover:text-coastal-turquoise transition-colors" data-target="resoluciones">Resoluciones</button>
+                    <button onclick="checkAdminAccess()" class="nav-link text-amber-400 hover:text-amber-300 transition-colors flex items-center space-x-1" data-target="admin">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> <span>Subir Archivo</span>
+                    </button>
+                </div>
+                <div>
+                    <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden px-4 pt-2 pb-6 space-y-3 bg-ocean-900 border-b border-coastal-teal/30">
+            <button onclick="switchPage('inicio'); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Inicio</button>
+            <button onclick="switchPage('programa'); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Programa</button>
+            <button onclick="checkAgendaAccess(); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Agenda (Directorio)</button>
+            <button onclick="switchPage('informes'); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Informes</button>
+            <button onclick="switchPage('calendario'); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Calendario</button>
+            <button onclick="switchPage('resoluciones'); toggleMobileMenu();" class="block w-full text-left text-slate-300 hover:text-coastal-turquoise py-2">Resoluciones</button>
+            <button onclick="checkAdminAccess(); toggleMobileMenu();" class="block w-full text-left text-amber-400 font-semibold py-2">Subir Archivo</button>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- VIEW: INICIO -->
+        <div id="view-inicio" class="page-view space-y-16">
+            <header id="hero-header" class="relative hero-gradient overflow-hidden py-16 lg:py-24 rounded-3xl border border-white/20 shadow-2xl transition-all duration-500">
+                <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute top-1/2 -right-40 w-96 h-96 bg-amber-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-8 text-center lg:text-left space-y-6">
+                            
+                            <!-- Título del Hero con XLIII grande arriba -->
+                            <div>
+                                <h1 class="font-serifHeading font-black text-6xl sm:text-7xl lg:text-8xl tracking-tight leading-none gold-glow-text mb-2 drop-shadow-xl" aria-label="XLIII">
+                                    XLIII
+                                </h1>
+                                <h2 class="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-wide leading-tight drop-shadow-lg">
+                                    Asamblea de Distrito
+                                </h2>
+                                <p class="font-heading font-bold text-2xl sm:text-3xl text-amber-300 tracking-wide mt-2 drop-shadow-md">
+                                    Sur Pacífico
+                                </p>
+                            </div>
+
+                            <!-- LEMA DENTRO DEL HERO -->
+                            <div class="pt-2">
+                                <div class="assembly-motto inline-block px-5 py-3 rounded-xl bg-white/20 border border-white/48 backdrop-blur-sm">
+                                    <p class="text-sm sm:text-base font-serifHeading italic tracking-wide text-white">
+                                        “Haciendo discípulos semejantes a Cristo en las naciones”
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                                <div class="flex items-center space-x-3 bg-ocean-950/75 backdrop-blur-md border border-white/20 px-5 py-3.5 rounded-2xl shadow-lg">
+                                    <div class="text-amber-400 text-2xl"><i class="fa-solid fa-calendar-days"></i></div>
+                                    <div class="text-left">
+                                        <span class="block text-xs text-slate-300 uppercase font-semibold">Fechas</span>
+                                        <span class="text-sm font-bold text-white">19-20 de Noviembre de 2026</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3 bg-ocean-950/75 backdrop-blur-md border border-white/20 px-5 py-3.5 rounded-2xl shadow-lg">
+                                    <div class="text-coastal-turquoise text-2xl"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="text-left">
+                                        <span class="block text-xs text-slate-300 uppercase font-semibold">Lugar</span>
+                                        <span class="text-sm font-bold text-white">1a. Acacoyagua</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Convenciones / Departamentos (JNI, DNI, MNI, Mayordomía) -->
+                        <div class="lg:col-span-4 flex flex-col items-center justify-center">
+                            <div class="w-full glass-card p-8 rounded-3xl glow-effect space-y-6 text-center">
+                                <h3 class="font-heading font-bold text-sm tracking-widest text-coastal-turquoise uppercase">Convenciones Distritales</h3>
+                                <div class="grid grid-cols-1 gap-4">
+                                    <!-- JNI -->
+                                    <div onclick="switchPage('convencion-jni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-sky-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-10 h-10 bg-sky-500/20 rounded-xl flex items-center justify-center text-sky-400 font-bold">
+                                                <i class="fa-solid fa-fire"></i>
+                                            </div>
+                                            <div class="text-left">
+                                                <span class="block font-heading font-bold text-white">JNI</span>
+                                                <span class="text-xs text-slate-300">Juventud Nazarena Internacional</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                                    </div>
+
+                                    <!-- DNI -->
+                                    <div onclick="switchPage('convencion-dni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-coastal-turquoise p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-10 h-10 bg-cyan-500/20 rounded-xl flex items-center justify-center text-coastal-turquoise font-bold">
+                                                <i class="fa-solid fa-book-bible"></i>
+                                            </div>
+                                            <div class="text-left">
+                                                <span class="block font-heading font-bold text-white">DNI</span>
+                                                <span class="text-xs text-slate-300">Discipulado Nazareno Internacional</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                                    </div>
+
+                                    <!-- MNI -->
+                                    <div onclick="switchPage('convencion-mni')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-amber-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center text-amber-400 font-bold">
+                                                <i class="fa-solid fa-earth-americas"></i>
+                                            </div>
+                                            <div class="text-left">
+                                                <span class="block font-heading font-bold text-white">MNI</span>
+                                                <span class="text-xs text-slate-300">Misiones Nazarenas Internacional</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                                    </div>
+
+                                    <!-- Mayordomía y Economía -->
+                                    <div onclick="switchPage('convencion-mayordomia')" class="w-full bg-ocean-900/85 border border-white/10 hover:border-teal-400 p-4 rounded-2xl shadow-lg flex items-center justify-between backdrop-blur-md cursor-pointer transition-all hover:-translate-y-1">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-10 h-10 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-300 font-bold">
+                                                <i class="fa-solid fa-users"></i>
+                                            </div>
+                                            <div class="text-left">
+                                                <span class="block font-heading font-bold text-white text-sm sm:text-base">Mayordomía y Economía</span>
+                                            </div>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right text-xs text-slate-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tarjetas de Acceso Rápido con Fondos de Mar/Playa -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+                <div onclick="switchPage('programa')" class="relative overflow-hidden bg-ocean-900/80 border border-white/20 hover:border-coastal-turquoise p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1 group shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-coastal-teal/20 text-coastal-turquoise flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform backdrop-blur-md border border-white/10">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-1">Programa Oficial</h3>
+                        <p class="text-xs text-slate-300">Consulta los horarios y actividades de la asamblea.</p>
+                    </div>
+                </div>
+                <div onclick="checkAgendaAccess()" class="relative overflow-hidden bg-ocean-900/80 border border-white/20 hover:border-emerald-400 p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1 group shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform backdrop-blur-md border border-white/10">
+                            <i class="fa-solid fa-address-book"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-1">Agenda Distrital</h3>
+                        <p class="text-xs text-slate-300">Directorio de Ministros</p>
+                    </div>
+                </div>
+                <div onclick="switchPage('informes')" class="relative overflow-hidden bg-ocean-900/80 border border-white/20 hover:border-cyan-400 p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1 group shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform backdrop-blur-md border border-white/10">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-1">Informes PDF</h3>
+                        <p class="text-xs text-slate-300">Descarga los reportes ministeriales y financieros.</p>
+                    </div>
+                </div>
+                <div onclick="switchPage('calendario')" class="relative overflow-hidden bg-ocean-900/80 border border-white/20 hover:border-sky-400 p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1 group shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-300 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform backdrop-blur-md border border-white/10">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-1">Calendario Oficial</h3>
+                        <p class="text-xs text-slate-300">Planeación anual y eventos del distrito.</p>
+                    </div>
+                </div>
+                <div onclick="switchPage('resoluciones')" class="relative overflow-hidden bg-ocean-900/80 border border-white/20 hover:border-amber-400 p-6 rounded-3xl cursor-pointer transition-all hover:-translate-y-1 group shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-45 transition-opacity" style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=400&q=80')"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform backdrop-blur-md border border-white/10">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-lg text-white mb-1">Resoluciones</h3>
+                        <p class="text-xs text-slate-300">Acuerdos y documentos oficiales aprobados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIONES / PÁGINAS PARA LAS CONVENCIONES CON LAS IMÁGENES OFICIALES -->
+
+        <!-- VIEW: CONVENCIÓN JNI -->
+        <div id="view-convencion-jni" class="page-view hidden space-y-8 max-w-3xl mx-auto">
+            <div class="flex items-center justify-between border-b border-coastal-teal/20 pb-4">
+                <div class="space-y-1">
+                    <span class="text-sky-400 font-semibold text-xs tracking-widest uppercase"><i class="fa-solid fa-fire mr-1"></i> Convención Distrital</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Juventud Nazarena Internacional (JNI)</h2>
+                </div>
+                <button onclick="switchPage('inicio')" class="px-4 py-2 bg-ocean-900 hover:bg-ocean-800 border border-coastal-teal/30 text-slate-200 rounded-xl text-xs font-semibold transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Volver al Inicio</span>
+                </button>
+            </div>
+            <div class="bg-ocean-900/90 border border-sky-500/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
+                <img src="jni.jpeg" alt="Convención JNI" class="w-full max-w-xl rounded-2xl shadow-lg object-contain">
+            </div>
+        </div>
+
+        <!-- VIEW: CONVENCIÓN DNI -->
+        <div id="view-convencion-dni" class="page-view hidden space-y-8 max-w-3xl mx-auto">
+            <div class="flex items-center justify-between border-b border-coastal-teal/20 pb-4">
+                <div class="space-y-1">
+                    <span class="text-coastal-turquoise font-semibold text-xs tracking-widest uppercase"><i class="fa-solid fa-book-bible mr-1"></i> Convención Distrital</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Discipulado Nazareno Internacional (DNI)</h2>
+                </div>
+                <button onclick="switchPage('inicio')" class="px-4 py-2 bg-ocean-900 hover:bg-ocean-800 border border-coastal-teal/30 text-slate-200 rounded-xl text-xs font-semibold transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Volver al Inicio</span>
+                </button>
+            </div>
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
+                <img src="dni.jpg" alt="Convención DNI" class="w-full max-w-xl rounded-2xl shadow-lg object-contain">
+            </div>
+        </div>
+
+        <!-- VIEW: CONVENCIÓN MNI -->
+        <div id="view-convencion-mni" class="page-view hidden space-y-8 max-w-3xl mx-auto">
+            <div class="flex items-center justify-between border-b border-coastal-teal/20 pb-4">
+                <div class="space-y-1">
+                    <span class="text-amber-400 font-semibold text-xs tracking-widest uppercase"><i class="fa-solid fa-earth-americas mr-1"></i> Convención Distrital</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Misiones Nazarenas Internacional (MNI)</h2>
+                </div>
+                <button onclick="switchPage('inicio')" class="px-4 py-2 bg-ocean-900 hover:bg-ocean-800 border border-coastal-teal/30 text-slate-200 rounded-xl text-xs font-semibold transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Volver al Inicio</span>
+                </button>
+            </div>
+            <div class="bg-ocean-900/90 border border-amber-500/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
+                <img src="mni.jpeg" alt="Convención MNI" class="w-full max-w-xl rounded-2xl shadow-lg object-contain">
+            </div>
+        </div>
+
+        <!-- VIEW: MAYORDOMÍA Y EVANGELISMO -->
+        <div id="view-convencion-mayordomia" class="page-view hidden space-y-8 max-w-3xl mx-auto">
+            <div class="flex items-center justify-between border-b border-coastal-teal/20 pb-4">
+                <div class="space-y-1">
+                    <span class="text-teal-300 font-semibold text-xs tracking-widest uppercase"><i class="fa-solid fa-users mr-1"></i> Departamento Distrital</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Mayordomía y Evangelismo</h2>
+                </div>
+                <button onclick="switchPage('inicio')" class="px-4 py-2 bg-ocean-900 hover:bg-ocean-800 border border-coastal-teal/30 text-slate-200 rounded-xl text-xs font-semibold transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Volver al Inicio</span>
+                </button>
+            </div>
+            <div class="bg-ocean-900/90 border border-teal-500/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
+                <img src="mayordomia.jpeg" alt="Convención Mayordomía" class="w-full max-w-xl rounded-2xl shadow-lg object-contain">
+            </div>
+        </div>
+
+        <!-- VIEW: LOGIN AGENDA (ACCESO MINISTROS CON dsp / 2620) -->
+        <div id="view-login-agenda" class="page-view hidden space-y-8 max-w-md mx-auto">
+            <div class="text-center space-y-2">
+                <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Seguridad Restringida</span>
+                <h2 class="font-heading font-extrabold text-3xl text-white">Acceso Exclusivo a Ministros</h2>
+                <p class="text-slate-400 text-sm">Ingresa con usuario: <strong class="text-emerald-300">dsp</strong> y contraseña: <strong class="text-emerald-300">2620</strong> para acceder a la agenda.</p>
+            </div>
+
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-8 shadow-2xl space-y-6">
+                <form id="login-agenda-form" onsubmit="handleAgendaLogin(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Usuario</label>
+                        <input type="text" id="login-agenda-user" required placeholder="Usuario" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-400 transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Contraseña</label>
+                        <input type="password" id="login-agenda-pass" required placeholder="••••••••" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-400 transition-colors">
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold rounded-xl text-sm transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-lock-open"></i>
+                        <span>Ingresar a Directorio</span>
+                    </button>
+                </form>
+                <div id="login-agenda-error" class="hidden text-center text-xs p-3 rounded-xl bg-red-500/20 text-red-300 border border-red-500/30"></div>
+            </div>
+        </div>
+
+        <!-- VIEW: LOGIN ADMIN (SUBIR ARCHIVOS) -->
+        <div id="view-login" class="page-view hidden space-y-8 max-w-md mx-auto">
+            <div class="text-center space-y-2">
+                <span class="text-amber-400 font-semibold text-xs tracking-widest uppercase">Seguridad Restringida</span>
+                <h2 class="font-heading font-extrabold text-3xl text-white">Acceso Administrador</h2>
+                <p class="text-slate-400 text-sm">Ingresa tus credenciales para acceder al panel de subida y gestión de archivos.</p>
+            </div>
+
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-8 shadow-2xl space-y-6">
+                <form id="login-form" onsubmit="handleLogin(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Usuario</label>
+                        <input type="text" id="login-user" required placeholder="Ingresa tu usuario" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Contraseña</label>
+                        <input type="password" id="login-pass" required placeholder="••••••••••••" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-amber-400 transition-colors">
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold rounded-xl text-sm transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-lock-open"></i>
+                        <span>Iniciar Sesión</span>
+                    </button>
+                </form>
+                <div id="login-error" class="hidden text-center text-xs p-3 rounded-xl bg-red-500/20 text-red-300 border border-red-500/30"></div>
+            </div>
+        </div>
+
+        <!-- VIEW: SUBIR ARCHIVO Y GESTIÓN (ADMIN PANEL) -->
+        <div id="view-admin" class="page-view hidden space-y-10 max-w-3xl mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="space-y-1">
+                    <span class="text-amber-400 font-semibold text-xs tracking-widest uppercase">Panel de Control Firebase</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Gestión de Archivos</h2>
+                </div>
+                <button onclick="logoutAdmin()" class="px-4 py-2 bg-red-500/10 hover:bg-red-500/25 border border-red-500/30 text-red-300 rounded-xl text-xs font-semibold transition-colors flex items-center space-x-2">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span>Cerrar Sesión</span>
+                </button>
+            </div>
+
+            <!-- Formulario Subir -->
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-8 shadow-2xl space-y-6">
+                <h3 class="font-heading font-bold text-lg text-white border-b border-coastal-teal/20 pb-3">Subir Nuevo Documento</h3>
+                <form id="upload-form" onsubmit="handleFileUpload(event)" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Título del Documento / Informe</label>
+                        <input type="text" id="input-title" required placeholder="Ej. Informe Financiero 2026" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-coastal-turquoise transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Categoría</label>
+                        <select id="input-category" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-coastal-turquoise transition-colors">
+                            <option value="informes">Informes de Asamblea</option>
+                            <option value="resoluciones">Resoluciones y Acuerdos</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Enlace Compartido de Google Drive</label>
+                        <input type="url" id="input-url" required placeholder="https://drive.google.com/file/d/.../view?usp=sharing" class="w-full bg-ocean-950 border border-coastal-teal/30 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-coastal-turquoise transition-colors">
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full py-3.5 bg-gradient-to-r from-coastal-turquoise via-coastal-teal to-amber-400 text-ocean-950 font-bold rounded-xl text-sm transition-all shadow-lg shadow-coastal-teal/20 flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Publicar Documento en Firebase</span>
+                    </button>
+                </form>
+                <div id="upload-message" class="hidden text-center text-xs p-3 rounded-xl"></div>
+            </div>
+
+            <!-- Lista de Archivos Subidos para Borrar -->
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-8 shadow-2xl space-y-6">
+                <h3 class="font-heading font-bold text-lg text-white border-b border-coastal-teal/20 pb-3">Documentos Registrados (Opciones de Borrado)</h3>
+                <div id="admin-files-list" class="space-y-3">
+                    <p class="text-xs text-slate-500 text-center py-4">Cargando lista de documentos...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: PROGRAMA ASAMBLEA -->
+        <div id="view-programa" class="page-view hidden space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <span class="text-coastal-turquoise font-semibold text-xs tracking-widest uppercase"><i class="fa-solid fa-water mr-1"></i> Agenda Oficial</span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Programa de la Asamblea</h2>
+                <p class="text-slate-300">Actividades programadas para los días de asamblea en el Distrito Sur Pacífico.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- DÍA UNO -->
+                <div class="coastal-card-bg-1 border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-500/30 text-amber-300 flex items-center justify-center font-heading font-bold text-lg border border-amber-400/30">19</div>
+                            <div>
+                                <span class="block text-xs font-semibold text-amber-300 uppercase tracking-wider">Día Uno</span>
+                                <h3 class="font-heading font-bold text-xl text-white">Jueves, 19 Noviembre 2026</h3>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-500/20 text-amber-200 text-xs rounded-full font-medium border border-amber-400/30">Inauguración</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="space-y-3">
+                            <div class="inline-block px-3.5 py-1 bg-amber-500/20 text-amber-300 text-xs rounded-full font-semibold border border-amber-400/30">
+                                Inicio a las 8:00 a.m.
+                            </div>
+                            <div class="space-y-2 text-xs text-slate-200 pl-2">
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10">
+                                    <span class="font-bold text-amber-400">A)</span> Registro de asistentes
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-amber-400">B)</span> Devocional de Apertura
+                                    <p class="text-slate-300 pl-4">Mensaje principal y tiempo de oración</p>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-amber-400">C)</span> Organización de la asamblea
+                                    <div class="pl-4 space-y-0.5 text-slate-300">
+                                        <p>• Bienvenida a la delegación</p>
+                                        <p>• Reconocimiento del número de delegados</p>
+                                        <p>• Presentación de ayudantes y escrutadores</p>
+                                        <p>• Establecimiento del área de votación</p>
+                                        <p>• Aprobación del horario de sesiones</p>
+                                    </div>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10">
+                                    <span class="font-bold text-amber-400">D)</span> Presentación de nuevos pastores y ministros asignados
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-amber-400">E)</span> Presentación de Informes Ministeriales
+                                    <div class="pl-4 space-y-0.5 text-slate-300">
+                                        <p>• Junta de Credenciales</p>
+                                        <p>• Junta de Estudios Ministeriales</p>
+                                        <p>• Comité de Finanzas y Propiedades</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-3 rounded-2xl bg-amber-500/20 border border-amber-400/30">
+                            <span class="text-xs font-bold text-amber-300 mt-1 bg-ocean-950 px-2 py-1 rounded-lg shrink-0">2:00 pm</span>
+                            <p class="text-xs text-amber-100 font-medium">RECESO / COMIDA - Reanudación a las 3:30 pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DÍA DOS -->
+                <div class="coastal-card-bg-2 border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-cyan-500/30 text-cyan-300 flex items-center justify-center font-heading font-bold text-lg border border-cyan-400/30">20</div>
+                            <div>
+                                <span class="block text-xs font-semibold text-cyan-300 uppercase tracking-wider">Día Dos</span>
+                                <h3 class="font-heading font-bold text-xl text-white">Viernes, 20 Noviembre 2026</h3>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-cyan-600/20 text-cyan-200 text-xs rounded-full font-medium border border-cyan-400/30">Clausura</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="space-y-3">
+                            <div class="inline-block px-3.5 py-1 bg-cyan-600/20 text-cyan-200 text-xs rounded-full font-semibold border border-cyan-400/30">
+                                Inicio 9:00 a.m.
+                            </div>
+                            <div class="space-y-2 text-xs text-slate-200 pl-2">
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-cyan-300">A)</span> Devocional
+                                    <p class="text-slate-300 pl-4">Lectura bíblica y alabanza</p>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-cyan-300">B)</span> Informe del Superintendente de Distrito
+                                    <p class="text-slate-300 pl-4">• Visión distrital: "Haciendo discípulos semejantes a Cristo"</p>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-cyan-300">C)</span> Elecciones y Resoluciones
+                                    <div class="pl-4 space-y-0.5 text-slate-300">
+                                        <p>• Presentación de resoluciones aprobadas</p>
+                                        <p>• Reporte de la comisión de conteo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-3 rounded-2xl bg-cyan-950/50 border border-cyan-400/30">
+                            <span class="text-xs font-bold text-cyan-300 mt-1 bg-ocean-950 px-2 py-1 rounded-lg shrink-0">2:00 p.m.</span>
+                            <p class="text-xs text-cyan-100 font-medium">RECESO / COMIDA</p>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="space-y-2 text-xs text-slate-200 pl-2">
+                                <div class="p-2.5 rounded-xl bg-ocean-950/70 border border-white/10 space-y-1">
+                                    <span class="font-bold text-cyan-300">D)</span> CULTO DE CLAUSURA Y ORDENACIÓN
+                                    <p class="text-slate-300 pl-4">• Consagración de la Directiva y Liderazgo</p>
+                                    <p class="text-slate-300 pl-4">• Clausura de la XLIII Asamblea</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: AGENDA / DIRECTORIO -->
+        <div id="view-agenda" class="page-view hidden space-y-8 max-w-5xl mx-auto">
+            <div class="text-center space-y-2">
+                <span class="text-emerald-400 font-semibold text-xs tracking-widest uppercase">Directorio Oficial</span>
+                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Agenda Ministerial</h2>
+                <p class="text-slate-400 text-sm">Directorio telefónico de Presbíteros, Ministros Licenciados y Ministros Laicos</p>
+            </div>
+
+            <!-- Buscador Global de Ministros -->
+            <div class="relative max-w-xl mx-auto">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" id="directory-search" oninput="filterDirectory()" placeholder="Buscar en Presbíteros, Licenciados y Laicos..." class="w-full bg-ocean-900 border border-coastal-teal/30 rounded-2xl pl-11 pr-4 py-3.5 text-white text-sm focus:outline-none focus:border-emerald-400 transition-colors shadow-lg">
+            </div>
+
+            <!-- Contenedor de Resultados de Búsqueda Global -->
+            <div id="global-search-results" class="hidden space-y-4">
+                <div class="border-b border-ocean-800 pb-2 flex items-center justify-between">
+                    <h3 class="font-heading font-bold text-coastal-turquoise text-sm uppercase tracking-wider">Resultados de la Búsqueda Global</h3>
+                    <span id="search-count" class="text-xs text-slate-400"></span>
+                </div>
+                <div id="search-results-container" class="space-y-3"></div>
+            </div>
+
+            <!-- Contenedor de Pestañas Normales -->
+            <div id="tabs-wrapper" class="space-y-6">
+                <!-- Pestañas de Navegación del Directorio -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 border-b border-ocean-800 pb-4">
+                    <button onclick="switchDirectoryTab('pbros')" id="btn-tab-pbros" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-coastal-turquoise via-coastal-teal to-amber-400 text-ocean-950 transition-all shadow-lg shadow-coastal-teal/20">
+                        <i class="fa-solid fa-user-tie mr-1"></i> Presbíteros
+                    </button>
+                    <button onclick="switchDirectoryTab('lic')" id="btn-tab-lic" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-ocean-900 border border-coastal-teal/30 text-slate-300 hover:text-white transition-all">
+                        <i class="fa-solid fa-user-graduate mr-1"></i> Ministros Licenciados
+                    </button>
+                    <button onclick="switchDirectoryTab('laicos')" id="btn-tab-laicos" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-ocean-900 border border-coastal-teal/30 text-slate-300 hover:text-white transition-all">
+                        <i class="fa-solid fa-users mr-1"></i> Ministros Laicos
+                    </button>
+                </div>
+
+                <!-- Contenedores de las Listas por Pestaña -->
+                <div id="dir-container-pbros" class="directory-section space-y-3"></div>
+                <div id="dir-container-lic" class="directory-section hidden space-y-3"></div>
+                <div id="dir-container-laicos" class="directory-section hidden space-y-3"></div>
+            </div>
+        </div>
+
+        <!-- VIEW: INFORMES PDF -->
+        <div id="view-informes" class="page-view hidden space-y-8 max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <div>
+                    <span class="text-indigo-400 font-semibold text-xs tracking-widest uppercase">Documentación Oficial</span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Informes de Asamblea</h2>
+                    <p class="text-slate-400 text-sm">Accede y descarga los informes sincronizados desde Firebase Firestore.</p>
+                </div>
+            </div>
+
+            <div id="informes-list-container" class="grid grid-cols-1 gap-4"></div>
+        </div>
+
+        <!-- VIEW: CALENDARIO DE GOOGLE INCRUSTADO -->
+        <div id="view-calendario" class="page-view hidden space-y-8 max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <div>
+                    <span class="text-cyan-400 font-semibold text-xs tracking-widest uppercase">Agenda Oficial</span>
+                    <h2 class="font-heading font-extrabold text-3xl text-white">Calendario del Distrito</h2>
+                    <p class="text-slate-400 text-sm">Consulte todas las actividades y eventos programados directamente en nuestro calendario.</p>
+                </div>
+            </div>
+
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
+                <div class="w-full overflow-x-auto flex justify-center">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=idn.distrito.surfronterizo%40gmail.com&ctz=America%2FMexico_City" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" class="max-w-full rounded-2xl"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW: RESOLUCIONES -->
+        <div id="view-resoluciones" class="page-view hidden space-y-8 max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <div>
+                    <span class="text-amber-400 font-semibold text-xs tracking-widest uppercase">Documentación Oficial</span>
+                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white">Resoluciones de la Asamblea</h2>
+                    <p class="text-slate-400 text-sm">Documentos oficiales, acuerdos y nombramientos sincronizados en tiempo real.</p>
+                </div>
+            </div>
+
+            <div id="resoluciones-list-container" class="grid grid-cols-1 gap-4"></div>
+        </div>
+
+    </main>
+
+    <footer class="bg-ocean-950 border-t border-coastal-teal/20 py-12 mt-24 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <p class="font-heading font-bold text-white text-base">XLIII Asamblea de Distrito - Sur Pacífico</p>
+                <p class="text-xs text-coastal-turquoise/80 mt-1">Iglesia del Nazareno • 1a. Acacoyagua</p>
+                <p class="text-xs text-slate-500 italic mt-0.5">"Haciendo discípulos semejantes a Cristo en las naciones"</p>
+            </div>
+            <p class="text-xs text-slate-500">© 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- CONFIGURACIÓN DE FIREBASE E INICIALIZACIÓN -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBxUU30fphltoxpcTFL7qBxi2eXdx9Tdao",
+            authDomain: "xxix-asamblea.firebaseapp.com",
+            projectId: "xxix-asamblea",
+            storageBucket: "xxix-asamblea.firebasestorage.app",
+            messagingSenderId: "586837010393",
+            appId: "1:586837010393:web:61413468bc7e024b541bc8",
+            measurementId: "G-F8X7FVVEZE"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        signInAnonymously(auth).catch((error) => {
+            console.warn("Nota de Firebase Auth:", error.code);
+        });
+
+        window.appData = {
+            informes: [],
+            resoluciones: []
+        };
+
+        window.rawDocuments = [];
+
+        onSnapshot(collection(db, "documentos"), (snapshot) => {
+            window.appData.informes = [];
+            window.appData.resoluciones = [];
+            window.rawDocuments = [];
+
+            snapshot.forEach((docSnap) => {
+                const docData = docSnap.data();
+                const item = { 
+                    id: docSnap.id, 
+                    title: docData.title, 
+                    category: docData.category,
+                    desc: docData.desc || "PDF • Google Drive", 
+                    url: docData.url 
+                };
+
+                window.rawDocuments.push(item);
+
+                const cat = docData.category;
+                if (window.appData[cat]) {
+                    window.appData[cat].push(item);
+                }
+            });
+
+            renderInformes();
+            renderResoluciones();
+            renderAdminFilesList();
+        });
+
+        window.handleFileUpload = async function(event) {
+            event.preventDefault();
+            const title = document.getElementById('input-title').value.trim();
+            const category = document.getElementById('input-category').value;
+            const url = document.getElementById('input-url').value.trim();
+            const msgBox = document.getElementById('upload-message');
+            const submitBtn = document.getElementById('submit-btn');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> <span>Guardando en Firebase...</span>`;
+
+            try {
+                await addDoc(collection(db, "documentos"), {
+                    title: title,
+                    category: category,
+                    url: url,
+                    desc: category === 'resoluciones' ? "PDF • Aprobado por la Asamblea" : "PDF • Google Drive",
+                    createdAt: serverTimestamp()
+                });
+
+                msgBox.className = "text-center text-xs p-3 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 block";
+                msgBox.innerHTML = `<i class="fa-solid fa-check-circle mr-1"></i> ¡Documento guardado exitosamente en Firebase y sincronizado globalmente!`;
+
+                document.getElementById('upload-form').reset();
+
+                setTimeout(() => {
+                    msgBox.classList.add('hidden');
+                }, 3000);
+            } catch (error) {
+                console.error("Error al guardar en Firestore:", error);
+                msgBox.className = "text-center text-xs p-3 rounded-xl bg-red-500/20 text-red-300 border border-red-500/30 block";
+                msgBox.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1"></i> Error al guardar. Verifica los permisos de Firestore.`;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up"></i> <span>Publicar Documento en Firebase</span>`;
+            }
+        };
+
+        window.deleteDocument = async function(docId, docTitle) {
+            if(!confirm(`¿Estás seguro de que deseas eliminar el documento "${docTitle}"?`)) return;
+
+            try {
+                await deleteDoc(doc(db, "documentos", docId));
+                alert("Documento eliminado correctamente de Firebase.");
+            } catch (error) {
+                console.error("Error al eliminar documento:", error);
+                alert("Hubo un error al intentar eliminar el documento.");
+            }
+        };
+    </script>
+
+    <!-- DATOS EXACTOS DE LAS LISTAS FUENTE (SIN INVENTAR NINGÚN CONTACTO) -->
+    <script>
+        const directoryData = {
+            pbros: [
+                { nombre: "Abel Cruz Solís", iglesia: "Sin Asignación", tel: "965 117 8086", tipo: "Presbítero" },
+                { nombre: "Ady Córdoba Ordoñez", iglesia: "Zapata 33", tel: "966 101 1021", tipo: "Presbítero" },
+                { nombre: "Aulibama Ortiz Jiménez", iglesia: "Asignación Ignacio 1ª", tel: "966 107 9263", tipo: "Presbítero" },
+                { nombre: "Alberto Ruíz Pérez", iglesia: "Sin Asignación", tel: "966 127 3736", tipo: "Presbítero" },
+                { nombre: "Apolinar López Solís", iglesia: "Asignado Distrital", tel: "964 109 5759", tipo: "Presbítero" },
+                { nombre: "Areli Ramos Cruz", iglesia: "Jalapa \"Ríos de Agua Viva\"", tel: "962 222 9729", tipo: "Presbítero" },
+                { nombre: "Ariel Hernández Estudillo", iglesia: "La Central", tel: "918 127 5728", tipo: "Presbítero" },
+                { nombre: "Asariel Manuel Peña", iglesia: "Sin Asignación", tel: "966 108 0841", tipo: "Presbítero" },
+                { nombre: "Bonifacio Joaquín Zacarías", iglesia: "Sin Asignación", tel: "966 122 7232", tipo: "Presbítero" },
+                { nombre: "Carlos Carrasco Arreola", iglesia: "La Linea", tel: "966 110 3230", tipo: "Presbítero" },
+                { nombre: "Cesilio Salazar Gumeta", iglesia: "Emiliano Zapata 1°", tel: "961 267 3777", tipo: "Presbítero" },
+                { nombre: "Daniel González Arguello", iglesia: "Arriaga 2ª", tel: "966 107 1477", tipo: "Presbítero" },
+                { nombre: "David Hernández García", iglesia: "Sin Asignación", tel: "966 113 5246", tipo: "Presbítero" },
+                { nombre: "Dolores Yazmín Girón Noriega", iglesia: "Villa Comaltitlán 1ª", tel: "55 4793 7733", tipo: "Presbítero" },
+                { nombre: "Eli Trujillo Ovando", iglesia: "Arriaga 1ª", tel: "966 100 4527", tipo: "Presbítero" },
+                { nombre: "Ernando Aguilar Solís", iglesia: "Guatemalita", tel: "961 627 2905", tipo: "Presbítero" },
+                { nombre: "Exaú Lorenzana Pérez", iglesia: "Ignacio Ramírez 1ª", tel: "966 114 9061", tipo: "Presbítero" },
+                { nombre: "Fidel Cruz Vázquez", iglesia: "La Polka", tel: "966 117 2537", tipo: "Presbítero" },
+                { nombre: "Francisco Alvarado Álvarez", iglesia: "Arriaga 5ª", tel: "966 115 7878", tipo: "Presbítero" },
+                { nombre: "Francisco Manuel Antonio", iglesia: "Manuel Ávila Camacho", tel: "966 213 1020", tipo: "Presbítero" },
+                { nombre: "Francisco Toledo Ordóñez", iglesia: "Misión Dios es amor", tel: "966 110 2239", tipo: "Presbítero" },
+                { nombre: "Fredi Pérez Gutiérrez", iglesia: "San Nicolás", tel: "961 864 3580", tipo: "Presbítero" },
+                { nombre: "Florentino Fajardo Ruiz", iglesia: "Sin Asignación", tel: "961 132 1846", tipo: "Presbítero" },
+                { nombre: "Gamaliel Niño Vázquez", iglesia: "Las cruces (Acapetahua)", tel: "918 110 3731", tipo: "Presbítero" },
+                { nombre: "Guillermo Ovando Ruíz", iglesia: "Huizachal 1ª", tel: "966 109 8764", tipo: "Presbítero" },
+                { nombre: "Heriberto Pérez Ordaz", iglesia: "Asignado Tonalá 3ª", tel: "966 123 9966", tipo: "Presbítero" },
+                { nombre: "Isabel Molina Torres", iglesia: "Tonalá 3ª", tel: "966 104 1374", tipo: "Presbítero" },
+                { nombre: "Isaí Hernández Toledo", iglesia: "Sin Asignación", tel: "966 118 5899", tipo: "Presbítero" },
+                { nombre: "Isaí Rodolfo Pascasio López", iglesia: "Pijijapan 1ª", tel: "961 787 5074", tipo: "Presbítero" },
+                { nombre: "Isaías Ortiz Pérez", iglesia: "Sin Asignación", tel: "966 110 4882", tipo: "Presbítero" },
+                { nombre: "Israel Ruíz Ulloa", iglesia: "Tiltepec", tel: "961 136 6407", tipo: "Presbítero" },
+                { nombre: "Jesús Alberto Balboa Ortiz", iglesia: "El Arenal", tel: "918 105 7540", tipo: "Presbítero" },
+                { nombre: "Jorge Luís Rodríguez Morales", iglesia: "Gracia y Gloria (4ª Tonalá)", tel: "966 664 7092", tipo: "Presbítero" },
+                { nombre: "José Luís Suárez Flores", iglesia: "Fuente de Vida", tel: "961 665 2064", tipo: "Presbítero" },
+                { nombre: "José Manuel Cigarroa Solís", iglesia: "Calera 1ª", tel: "55 5404 5674", tipo: "Presbítero" },
+                { nombre: "José Leyvi Pérez Arteaga", iglesia: "Sin Asignación", tel: "966 118 7402", tipo: "Presbítero" },
+                { nombre: "José Luís Hernández Ulloa", iglesia: "Arriaga 6ª", tel: "966 115 6809", tipo: "Presbítero" },
+                { nombre: "José Rosario González Rosales", iglesia: "Hidalgo Acacoyagua", tel: "918 125 3651", tipo: "Presbítero" },
+                { nombre: "José Uver Ovando Espinosa", iglesia: "Huanacaste", tel: "918 117 0578", tipo: "Presbítero" },
+                { nombre: "Julián Téllez Pacheco", iglesia: "Cinco de Mayo", tel: "966 122 0311", tipo: "Presbítero" },
+                { nombre: "Leonel Ocampo Vásquez", iglesia: "Sin Asignación", tel: "972 101 3072", tipo: "Presbítero" },
+                { nombre: "Leonor Fajardo Espinosa", iglesia: "Asignación Ministro Educación 3ª Paredón", tel: "961 463 4070", tipo: "Presbítero" },
+                { nombre: "Lidia de los Santos Niño", iglesia: "Asignado Bethel (Misión)", tel: "960 232 6315", tipo: "Presbítero" },
+                { nombre: "Lourdes Ramos Trujillo", iglesia: "ITM Piedritas \"Roca Eterna\"", tel: "966 106 0302", tipo: "Presbítero" },
+                { nombre: "Luciano Hernández García", iglesia: "Tutuán", tel: "918 115 9240", tipo: "Presbítero" },
+                { nombre: "Luís Alberto Pérez Zavala", iglesia: "Ignacio Ramírez 2ª", tel: "966 118 7087", tipo: "Presbítero" },
+                { nombre: "Luís Ángel Ríos Ramos", iglesia: "Durango", tel: "960 187 4988", tipo: "Presbítero" },
+                { nombre: "Magdiel Salinas Peña", iglesia: "Miguel Hidalgo 2 \"Cristo la Roca\"", tel: "966 113 8434", tipo: "Presbítero" },
+                { nombre: "María del Carmen Cruz Farrera", iglesia: "Arriaga 4ª", tel: "966 218 7741", tipo: "Presbítero" },
+                { nombre: "María de Jesús Hernández Conde", iglesia: "Sin Asignación", tel: "966 109 9923", tipo: "Presbítero" },
+                { nombre: "Mariano Hernández Pérez", iglesia: "Sin Asignación", tel: "Sin teléfono", tipo: "Presbítero" },
+                { nombre: "Mariano Vásquez Nicolás", iglesia: "Paredón 1ª", tel: "963 157 8451", tipo: "Presbítero" },
+                { nombre: "Martha Gallegos López", iglesia: "Asignada (Misión Dios es Amor)", tel: "966 113 8542", tipo: "Presbítero" },
+                { nombre: "Mayra Escobar Pérez", iglesia: "Sin Asignación", tel: "966 114 8028", tipo: "Presbítero" },
+                { nombre: "Miguel Ángel Lorenzana Pérez", iglesia: "Mapastepec 1ª", tel: "966 114 4014", tipo: "Presbítero" },
+                { nombre: "Merari Palomeque Manuel", iglesia: "Asociada Arriaga 1ª (Tierra y Libertad)", tel: "918 116 3852", tipo: "Presbítero" },
+                { nombre: "Moisés Aguilar Peña", iglesia: "Paredón 3ª", tel: "966 109 8597", tipo: "Presbítero" },
+                { nombre: "Moisés Medina", iglesia: "Misión Flores Magón \"Puerta del Cielo\"", tel: "967 157 4533", tipo: "Presbítero" },
+                { nombre: "Nehemías Aguilar Peña", iglesia: "Villa Comaltitlán 2ª", tel: "918 138 0272", tipo: "Presbítero" },
+                { nombre: "Nora Escobar Pérez", iglesia: "Sin Asignación", tel: "966 106 3498", tipo: "Presbítero" },
+                { nombre: "Pablo Solís López", iglesia: "Tonalá 1ª", tel: "966 118 4451", tipo: "Presbítero" },
+                { nombre: "Reynol Romero Cruz", iglesia: "Jubilado Sin Asignación", tel: "968 129 8466", tipo: "Presbítero" },
+                { nombre: "Ricardo Manuel Luján", iglesia: "Emiliano Zapata 2ª", tel: "966 128 9887", tipo: "Presbítero" },
+                { nombre: "Ronay López Romero", iglesia: "Sin Asignación", tel: "Sin teléfono", tipo: "Presbítero" },
+                { nombre: "Sael Solís Cruz", iglesia: "Sin Asignación", tel: "966 160 7742", tipo: "Presbítero" },
+                { nombre: "Samuel Álvarez Hernández", iglesia: "Sin Asignación", tel: "960 121 6850", tipo: "Presbítero" },
+                { nombre: "Sebastián Ortiz Torres", iglesia: "Adolfo López Mateos", tel: "918 111 9709", tipo: "Presbítero" },
+                { nombre: "Silberio Ventura Moreno", iglesia: "Cabeza de Toro 2ª \"Jesús es el Camino\" (Asignado)", tel: "966 101 1990", tipo: "Presbítero" },
+                { nombre: "Sinar Zavala Perianza", iglesia: "Nuevo Progreso", tel: "918 153 3720", tipo: "Presbítero" },
+                { nombre: "Tito Hernández Toledo", iglesia: "Nueva Sesecapa", tel: "960 139 9730", tipo: "Presbítero" },
+                { nombre: "Víctor Manuel Ortiz Cruz", iglesia: "Sin Asignación", tel: "966 128 4757", tipo: "Presbítero" }
+            ],
+            lic: [
+                { nombre: "Benicia Ramos Toledo", iglesia: "Escobo", tel: "966 101 9114", tipo: "M. Licenciado" },
+                { nombre: "Carlos Alfredo Espinosa Salazar", iglesia: "Cabeza de Toro 1ª", tel: "966 102 8344", tipo: "M. Licenciado" },
+                { nombre: "Esdras Alvarado Hernández", iglesia: "La Blanca", tel: "966 102 8962", tipo: "M. Licenciado" },
+                { nombre: "Fidel Hernández Vázquez", iglesia: "Escuintla", tel: "961 720 2003", tipo: "M. Licenciado" },
+                { nombre: "Gonzalo Ruiz Vázquez", iglesia: "La Laguna", tel: "966 115 3535", tipo: "M. Licenciado" },
+                { nombre: "Guadalupe Irene Quiñonez Soto", iglesia: "Asignación 1ª Pijijapan", tel: "961 645 3088", tipo: "M. Licenciado" },
+                { nombre: "Hugo Manuel Cruz", iglesia: "Paredón 2ª", tel: "966 112 0767", tipo: "M. Licenciado" },
+                { nombre: "Isaí Fajardo Castillejos", iglesia: "Sin Asignación", tel: "665 121 3832", tipo: "M. Licenciado" },
+                { nombre: "Jesús Alberto Hernández Manuel", iglesia: "El Llanito", tel: "961 837 4304", tipo: "M. Licenciado" },
+                { nombre: "Joel Castro Espinoza", iglesia: "Tonalá 2ª", tel: "966 118 5114", tipo: "M. Licenciado" },
+                { nombre: "José Luis Pérez López", iglesia: "Santa Rosa", tel: "966 110 9961", tipo: "M. Licenciado" },
+                { nombre: "María Guadalupe Montoya Meza", iglesia: "Asignada Calera 1ª", tel: "961 709 0327", tipo: "M. Licenciado" },
+                { nombre: "Nehemías Samuel López Simuta", iglesia: "Acacoyagua 2ª", tel: "918 115 4028", tipo: "M. Licenciado" },
+                { nombre: "Noé Hernández Villatoro", iglesia: "Luis Espinosa", tel: "918 122 4973", tipo: "M. Licenciado" },
+                { nombre: "Salem Alvarado Hernández", iglesia: "Arriaga 3ª", tel: "966 113 5392", tipo: "M. Licenciado" },
+                { nombre: "Aldo Horacio Saldaña Matías", iglesia: "Ulapa", tel: "994 106 5621", tipo: "M. Licenciado" },
+                { nombre: "Liliana Zavala Cruz", iglesia: "Villa Hermosa", tel: "966 664 9301", tipo: "M. Licenciado" },
+                { nombre: "Eduardo Cruz Antonio", iglesia: "1ª Acapetahua", tel: "918 101 8825", tipo: "M. Licenciado" },
+                { nombre: "María de Lourdes Nandayapa Hernández", iglesia: "Sin Asignación", tel: "961 280 1764", tipo: "M. Licenciado" }
+            ],
+            laicos: [
+                { nombre: "Acdiel Valencia", iglesia: "La Linea 2", tel: "966 102 1590", tipo: "M. Laico" },
+                { nombre: "Adonahi Jacob", iglesia: "Fronterita", tel: "918 124 3332", tipo: "M. Laico" },
+                { nombre: "Brenda Arrazola", iglesia: "El Triunfo", tel: "961 717 8703", tipo: "M. Laico" },
+                { nombre: "Carlos César Antonio Cardona", iglesia: "Soconusco", tel: "No registrado", tipo: "M. Laico" },
+                { nombre: "Elyn Celaya Escobar", iglesia: "La Gloria", tel: "No registrado", tipo: "M. Laico" },
+                { nombre: "German Pérez Gaitán", iglesia: "El Zapotal", tel: "918 125 6994", tipo: "M. Laico" },
+                { nombre: "Guadalupe Zavala Ovando", iglesia: "2ª Mapastepec", tel: "918 103 7046", tipo: "M. Laico" },
+                { nombre: "Jacinto Hilerio de la Cruz", iglesia: "Nueva Esperanza", tel: "961 401 2120", tipo: "M. Laico" },
+                { nombre: "Jorge Pérez López", iglesia: "Huizachal 2°", tel: "966 108 5856", tipo: "M. Laico" },
+                { nombre: "Mariano Rodríguez Rodríguez", iglesia: "Las Cruces", tel: "No registrado", tipo: "M. Laico" },
+                { nombre: "Miriam Jacob", iglesia: "La Alianza", tel: "961 591 8416", tipo: "M. Laico" },
+                { nombre: "Mónica Matías Salas", iglesia: "Nueva Libertad", tel: "No registrado", tipo: "M. Laico" },
+                { nombre: "Neptali Espinosa Osorio", iglesia: "Valdivia", tel: "918 114 9147", tipo: "M. Laico" },
+                { nombre: "Rómulo Sierra Vázquez", iglesia: "Julián Grajales", tel: "No registrado", tipo: "M. Laico" },
+                { nombre: "Teresa Elisabeth Pérez Alegría", iglesia: "Buena Vista", tel: "918 100 5617", tipo: "M. Laico" },
+                { nombre: "Vicente Iglesias de la Rosa", iglesia: "Pueblo Nuevo", tel: "966 109 2899", tipo: "M. Laico" }
+            ]
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderDirectoryLists();
+        });
+
+        function renderDirectoryLists() {
+            ['pbros', 'lic', 'laicos'].forEach(tabKey => {
+                const container = document.getElementById(`dir-container-${tabKey}`);
+                if(container) {
+                    container.innerHTML = directoryData[tabKey].map(item => createContactCard(item)).join('');
+                }
+            });
+        }
+
+        function createContactCard(item) {
+            const cleanTel = item.tel ? item.tel.toString().trim() : '';
+            const isNoReg = !cleanTel || cleanTel.toLowerCase().includes('no registrado') || cleanTel.toLowerCase().includes('sin teléfono');
+            
+            const whatsappMsg = encodeURIComponent(`Saludos y bendiciones ${item.tipo} ${item.nombre}:`);
+
+            return `
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-2xl bg-ocean-900/90 border border-coastal-teal/20 shadow-lg gap-4">
+                    <div class="space-y-1 text-left">
+                        <div class="flex items-center space-x-2">
+                            <h4 class="font-heading font-bold text-white text-base">${item.nombre}</h4>
+                            <span class="px-2 py-0.5 text-[10px] uppercase font-bold rounded bg-ocean-800 text-coastal-turquoise border border-coastal-teal/30">${item.tipo}</span>
+                        </div>
+                        <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-coastal-teal/10 text-coastal-turquoise border border-coastal-teal/20">${item.iglesia}</span>
+                    </div>
+                    <div class="flex items-center space-x-3 w-full sm:w-auto justify-end">
+                        ${!isNoReg ? `
+                            <a href="tel:+52${cleanTel.replace(/\s+/g, '')}" class="flex-1 sm:flex-none px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Llamar</span>
+                            </a>
+                            <a href="https://wa.me/52${cleanTel.replace(/\s+/g, '')}?text=${whatsappMsg}" target="_blank" class="flex-1 sm:flex-none px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center justify-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        ` : `
+                            <span class="text-xs text-slate-500 italic px-3 py-1 bg-ocean-950 rounded-lg">Teléfono no registrado</span>
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterDirectory() {
+            const query = document.getElementById('directory-search').value.toLowerCase().trim();
+            const searchResultsBox = document.getElementById('global-search-results');
+            const searchContainer = document.getElementById('search-results-container');
+            const searchCount = document.getElementById('search-count');
+            const tabsWrapper = document.getElementById('tabs-wrapper');
+
+            if (query === "") {
+                searchResultsBox.classList.add('hidden');
+                tabsWrapper.classList.remove('hidden');
+                searchContainer.innerHTML = "";
+                return;
+            }
+
+            tabsWrapper.classList.add('hidden');
+            searchResultsBox.classList.remove('hidden');
+
+            const allMinisters = [...directoryData.pbros, ...directoryData.lic, ...directoryData.laicos];
+            const filtered = allMinisters.filter(item => 
+                (item.nombre && item.nombre.toLowerCase().includes(query)) || 
+                (item.iglesia && item.iglesia.toLowerCase().includes(query))
+            );
+
+            searchCount.innerText = `${filtered.length} resultado(s) encontrado(s)`;
+            searchContainer.innerHTML = filtered.length === 0 
+                ? `<div class="p-8 text-center text-slate-400 bg-ocean-900/40 rounded-2xl border text-xs">No se encontraron ministros que coincidan con "${query}".</div>`
+                : filtered.map(item => createContactCard(item)).join('');
+        }
+
+        function switchDirectoryTab(tabKey) {
+            document.querySelectorAll('.directory-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`dir-container-${tabKey}`).classList.remove('hidden');
+
+            ['pbros', 'lic', 'laicos'].forEach(k => {
+                const btn = document.getElementById(`btn-tab-${k}`);
+                if(k === tabKey) {
+                    btn.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-blue-600 text-white transition-all shadow-lg";
+                } else {
+                    btn.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-ocean-900 border border-coastal-teal/30 text-slate-300 hover:text-white transition-all";
+                }
+            });
+        }
+
+        function checkAgendaAccess() {
+            if (sessionStorage.getItem('agenda_logged') === 'true') {
+                switchPage('agenda');
+            } else {
+                switchPage('login-agenda');
+            }
+        }
+
+        function handleAgendaLogin(event) {
+            event.preventDefault();
+            const user = document.getElementById('login-agenda-user').value.trim();
+            const pass = document.getElementById('login-agenda-pass').value.trim();
+            const errorBox = document.getElementById('login-agenda-error');
+
+            if (user === 'dsp' && pass === '2620') {
+                sessionStorage.setItem('agenda_logged', 'true');
+                errorBox.classList.add('hidden');
+                switchPage('agenda');
+            } else {
+                errorBox.classList.remove('hidden');
+                errorBox.innerText = "Usuario o contraseña incorrectos. Usa dsp / 2620.";
+            }
+        }
+
+        function checkAdminAccess() {
+            if (sessionStorage.getItem('admin_logged') === 'true') {
+                switchPage('admin');
+            } else {
+                switchPage('login');
+            }
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const user = document.getElementById('login-user').value.trim();
+            const pass = document.getElementById('login-pass').value.trim();
+            if (user === 'MarcoXp' && pass === '20marcoherrera22') {
+                sessionStorage.setItem('admin_logged', 'true');
+                switchPage('admin');
+            } else {
+                document.getElementById('login-error').classList.remove('hidden');
+                document.getElementById('login-error').innerText = "Credenciales incorrectas.";
+            }
+        }
+
+        function logoutAdmin() {
+            sessionStorage.removeItem('admin_logged');
+            switchPage('inicio');
+        }
+
+        function switchPage(pageId) {
+            document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+            const target = document.getElementById(`view-${pageId}`);
+            if(target) {
+                target.classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+    </script>
+</body>
+</html>
