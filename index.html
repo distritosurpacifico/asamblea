@@ -849,7 +849,7 @@
             <div id="informes-list-container" class="grid grid-cols-1 gap-4"></div>
         </div>
 
-        <!-- VIEW: CALENDARIO DE GOOGLE INCRUSTADO -->
+        <!-- VIEW: CALENDARIO DE GOOGLE INCRUSTADO (CORREGIDO PARA MOSTRARSE DIRECTAMENTE) -->
         <div id="view-calendario" class="page-view hidden space-y-8 max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
                 <div>
@@ -859,9 +859,9 @@
                 </div>
             </div>
 
-            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-4 sm:p-6 shadow-2xl flex justify-center overflow-hidden">
-                <div class="w-full overflow-x-auto flex justify-center">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=distrito.sur.pacifico.mexico%40gmail.com&ctz=America%2FMexico_City" style="border: 0" width="800" height="600" frameborder="0" scrolling="no" class="max-w-full rounded-2xl"></iframe>
+            <div class="bg-ocean-900/90 border border-coastal-teal/30 rounded-3xl p-4 sm:p-6 shadow-2xl">
+                <div class="w-full overflow-hidden rounded-2xl bg-white">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=distrito.sur.pacifico.mexico%40gmail.com&ctz=America%2FMexico_City" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
         </div>
