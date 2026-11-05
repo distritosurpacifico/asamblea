@@ -849,7 +849,7 @@
             <div id="informes-list-container" class="grid grid-cols-1 gap-4"></div>
         </div>
 
-        <!-- VIEW: CALENDARIO DE GOOGLE INCRUSTADO (FORZADO A VISUALIZACIÓN DIRECTA) -->
+        <!-- VIEW: CALENDARIO DE GOOGLE INCRUSTADO -->
         <div id="view-calendario" class="page-view hidden space-y-8 max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
                 <div>
@@ -934,7 +934,7 @@
                     id: docSnap.id, 
                     title: docData.title, 
                     category: docData.category,
-                    desc: docData.desc || "PDF • Google Drive", 
+                    desc: docData.desc || (docData.category === 'resoluciones' ? "PDF • Aprobado por la Asamblea" : "PDF • Google Drive"), 
                     url: docData.url 
                 };
 
@@ -950,6 +950,63 @@
             renderResoluciones();
             renderAdminFilesList();
         });
+
+        window.renderInformes = function() {
+            const container = document.getElementById('informes-list-container');
+            if(!container) return;
+            const items = window.appData.informes;
+            container.innerHTML = items.length === 0 ? `<p class="text-xs text-slate-400 text-center py-6">No hay informes publicados actualmente.</p>` :
+            items.map(item => `
+                <div class="flex items-center justify-between p-5 rounded-2xl bg-ocean-900/90 border border-coastal-teal/20 shadow-lg">
+                    <div>
+                        <h4 class="font-bold text-white text-base">${item.title}</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">${item.desc}</p>
+                    </div>
+                    <a href="${item.url}" target="_blank" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center space-x-1.5">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Ver PDF</span>
+                    </a>
+                </div>
+            `).join('');
+        };
+
+        window.renderResoluciones = function() {
+            const container = document.getElementById('resoluciones-list-container');
+            if(!container) return;
+            const items = window.appData.resoluciones;
+            container.innerHTML = items.length === 0 ? `<p class="text-xs text-slate-400 text-center py-6">No hay resoluciones registradas actualmente.</p>` :
+            items.map(item => `
+                <div class="flex items-center justify-between p-5 rounded-2xl bg-ocean-900/90 border border-coastal-teal/20 shadow-lg">
+                    <div>
+                        <h4 class="font-bold text-white text-base">${item.title}</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">${item.desc}</p>
+                    </div>
+                    <a href="${item.url}" target="_blank" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-xl text-xs font-bold transition-all shadow-md flex items-center space-x-1.5">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>Ver PDF</span>
+                    </a>
+                </div>
+            `).join('');
+        };
+
+        window.renderAdminFilesList = function() {
+            const container = document.getElementById('admin-files-list');
+            if(!container) return;
+            const items = window.rawDocuments;
+            container.innerHTML = items.length === 0 ? `<p class="text-xs text-slate-500 text-center py-4">No hay documentos registrados.</p>` :
+            items.map(item => `
+                <div class="flex items-center justify-between p-3 bg-ocean-950 border border-white/10 rounded-xl text-xs">
+                    <div>
+                        <span class="text-white font-bold block">${item.title}</span>
+                        <span class="text-[10px] text-coastal-turquoise uppercase font-semibold">${item.category}</span>
+                    </div>
+                    <button onclick="deleteDocument('${item.id}', '${item.title}')" class="px-3 py-1.5 bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 rounded-lg transition-colors flex items-center space-x-1">
+                        <i class="fa-solid fa-trash-can"></i>
+                        <span>Eliminar</span>
+                    </button>
+                </div>
+            `).join('');
+        };
 
         window.handleFileUpload = async function(event) {
             event.preventDefault();
@@ -1248,7 +1305,7 @@
                 sessionStorage.setItem('admin_logged', 'true');
                 switchPage('admin');
             } else {
-                document.getElementById('login-error').classList.add('hidden'); // Corregido de ocultar
+                document.getElementById('login-error').classList.add('hidden');
                 document.getElementById('login-error').classList.remove('hidden');
                 document.getElementById('login-error').innerText = "Credenciales incorrectas.";
             }
